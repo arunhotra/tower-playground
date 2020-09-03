@@ -1,0 +1,16 @@
+---
+- name: Create Http Apps
+  hosts: bigip-aws
+  gather_facts: no
+
+
+
+- name: Collect BIG-IP information
+  bigip_device_info:
+    gather_subset:
+      - interfaces
+    provider:
+      server: "{{ server }}"
+      user: "{{ user }}"
+      password: "{{ password }}"
+  delegate_to: localhost
