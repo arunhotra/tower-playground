@@ -7,7 +7,7 @@
       server_port: "{{ server_port }}"
       validate_certs: no
     gather_subset:
-      - devices
+      - "{{ fact }}"
   delegate_to: localhost
   tags:
     - device-info
