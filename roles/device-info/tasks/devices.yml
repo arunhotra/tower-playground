@@ -1,6 +1,11 @@
 - name: COLLECT BIG-IP Devices
   bigip_device_info:
-    provider: "{{ provider }}"
+    provider: 
+      server: "{{ server }}"
+      user: "{{ user }}"
+      password: "{{ password }}"
+      server_port: "{{ server_port }}"
+      validate_certs: no
     gather_subset:
       - devices
   delegate_to: localhost
