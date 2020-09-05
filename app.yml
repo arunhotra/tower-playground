@@ -1,16 +1,14 @@
 ---
-- name: Create Http Apps
-  hosts: bigip-aws
+- name: Big IP Operations
+  hosts: localhost
   gather_facts: no
 
+  # collections:
+  # - f5networks.f5_module
 
 
-- name: Collect BIG-IP information
-  bigip_device_info:
-    gather_subset:
-      - interfaces
-    provider:
-      server: "{{ server }}"
-      user: "{{ user }}"
-      password: "{{ password }}"
-  delegate_to: localhost
+  roles:
+    - device-info
+
+
+

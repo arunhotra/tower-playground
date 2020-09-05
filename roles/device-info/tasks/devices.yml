@@ -1,0 +1,9 @@
+- name: COLLECT BIG-IP Devices
+  bigip_device_info:
+    provider: "{{ provider }}"
+    gather_subset:
+      - devices
+  delegate_to: localhost
+  tags:
+    - device-info
+    - devices
