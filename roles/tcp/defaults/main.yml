@@ -1,0 +1,10 @@
+# ---
+# # defaults file for roles/bigip-upgrade
+
+# provider:
+#   server: 54.89.34.114
+#   user: admin
+#   password: Str0ngPa$$
+#   server_port: 8443
+#   validate_certs: no
+

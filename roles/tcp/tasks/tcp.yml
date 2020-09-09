@@ -1,0 +1,11 @@
+- name: Deploy an tcp app service configuration
+  bigip_appsvcs_extension:
+    content: "{{ lookup('file', '../files/tcp.json') }}"
+    state: present
+    provider: 
+      password: "{{ password }}"
+      server: "{{ server }}"
+      user: "{{ user }}"
+      server_port: "{{ server_port }}"
+      validate_certs: no
+  delegate_to: localhost
