@@ -1,7 +1,7 @@
 - name: Remove tenants from app service configurations
   bigip_appsvcs_extension:
     tenants:
-      - "{{ tenant }}"
+      - "t_{{ tenant }}"
     state: absent
     provider: 
       password: "{{ password }}"

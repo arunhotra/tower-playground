@@ -1,3 +1,4 @@
 *.pem
 notes
 inventory
+*.log
