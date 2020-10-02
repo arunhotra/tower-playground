@@ -2,7 +2,7 @@
 
 - name: Create directories per tenant for storing the declarations
   file: 
-    path: "..files/t_{{APPLICATION_NAME}}"
+    path: "../files/t_{{APPLICATION_NAME}}"
     state: directory
   tags:
     - create-app
@@ -12,7 +12,7 @@
 - name: Build JSON payload using template 
   template: 
     src: "tcp.j2" 
-    dest: "..files/t_{{APPLICATION_NAME}}/{{APPLICATION_NAME}}_as3.json"
+    dest: "../files/t_{{APPLICATION_NAME}}/{{APPLICATION_NAME}}_as3.json"
   tags:
     - create-app
     - tcp
