@@ -11,7 +11,7 @@
 
 - name: Build JSON payload using template 
   template: 
-    src: "..templates/tcp.j2" 
+    src: "tcp.j2" 
     dest: "..files/t_{{APPLICATION_NAME}}/{{APPLICATION_NAME}}_as3.json"
   tags:
     - create-app
