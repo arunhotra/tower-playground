@@ -1,5 +1,13 @@
 
 
+- name: Create directories per tenant for storing the declarations
+  file: 
+    path: "..files/t_{{APPLICATION_NAME}}"
+    state: directory
+  tags:
+    - create-app
+    - tcp
+
 
 - name: Build JSON payload using template for one app folder
   template: 
