@@ -1,6 +1,18 @@
+
+
+
+- name: Build JSON payload using template for one app folder
+  template: 
+    src: "tcp.j2" 
+    dest: "..files/t_{{APPLICATION_NAME}}/{{APPLICATION_NAME}}_as3.json"
+  tags:
+    - create-app
+    - tcp
+
+
 - name: Deploy an tcp app service configuration
   bigip_appsvcs_extension:
-    content: "{{ lookup('file', '../files/tcp.json') }}"
+    content: "{{ lookup('file', '../files/t_{{APPLICATION_NAME}}/{{APPLICATION_NAME}}_as3.json') }}"
     state: present
     provider: 
       password: "{{ password }}"
@@ -9,3 +21,6 @@
       server_port: "{{ server_port }}"
       validate_certs: no
   delegate_to: localhost
+  tags:
+    - create-app
+    - tcp
