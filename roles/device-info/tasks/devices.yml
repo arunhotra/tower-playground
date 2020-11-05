@@ -1,7 +1,7 @@
 - name: COLLECT BIG-IP Devices
   bigip_device_info:
     provider: 
-      server: "{{ server }}"
+      server: "{{ inventory_hostname }}"
       user: "{{ user }}"
       password: "{{ password }}"
       server_port: "{{ server_port }}"

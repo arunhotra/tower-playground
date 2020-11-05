@@ -5,7 +5,7 @@
     state: absent
     provider: 
       password: "{{ password }}"
-      server: "{{ server }}"
+      server: "{{ inventory_hostname }}"
       user: "{{ user }}"
       server_port: "{{ server_port }}"
       validate_certs: no
