@@ -1,6 +1,6 @@
 ---
 - name: Big IP Operations
-  hosts: localhost
+  # hosts: localhost
   gather_facts: no
 
   # collections:
